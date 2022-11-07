@@ -1,0 +1,56 @@
+.nav-container {
+  width: 100%;
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container a {
+  font-size: var(--text-1);
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nav-menu {
+  max-width: var(--width-page);
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.nav-links > ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+}
+
+.links > li > a {
+  padding: 21px;
+}
+
+.links > li > a:hover {
+  border-bottom: 3px solid var(--optional-color);
+  color: var(--optional-color);
+}

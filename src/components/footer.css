@@ -1,0 +1,102 @@
+footer {
+  width: 100%;
+  background: #181c27 url(../img/backgrounds/bg_footer.png) 0 0 no-repeat;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.divider {
+  position: absolute;
+  width: inherit;
+  height: 40px;
+  background: rgb(24, 28, 39);
+  background: linear-gradient(
+    360deg,
+    rgba(24, 28, 39, 1) 24%,
+    rgba(0, 0, 0, 0.008841036414565795) 100%
+  );
+  top: -37px;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40vh;
+  padding-top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.footer-container a:hover {
+  transform: scale(1.2);
+}
+
+.contact {
+  margin: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+  border-bottom: 3px solid var(--optional-color);
+}
+
+.contact div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.me,
+.me div {
+  align-self: flex-end;
+  z-index: 10;
+}
+
+.fa-facebook {
+  color: blue;
+}
+
+.fa-twitter {
+  color: #1c9bf0;
+}
+
+.fa-instagram {
+  color: #fc02a8;
+}
+
+.fa-youtube {
+  color: #ff0100;
+}
+
+.fa-github,
+.fa-envelope {
+  color: white;
+}
+
+.fa-linkedin {
+  color: #0073b2;
+}
+
+.bottomImg {
+  position: absolute;
+  bottom: 0;
+  max-width: var(--width-page);
+}
+
+.bottomImg img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 830px) {
+  .footer-container {
+    height: 55vh;
+  }
+}

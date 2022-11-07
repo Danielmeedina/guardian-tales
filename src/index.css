@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1200,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+  --title-color: #141a1f;
+  --optional-color: rgb(255, 181, 51);
+  --width-page: 1200px;
+  --text-0: clamp(0.69rem, calc(0.6rem + 0.48vw), 0.96rem);
+  --text-1: clamp(0.83rem, calc(0.7rem + 0.67vw), 1.2rem);
+  --text-2: clamp(1rem, calc(0.82rem + 0.91vw), 1.5rem);
+  --text-3: clamp(1.2rem, calc(0.95rem + 1.23vw), 1.88rem);
+  --text-4: clamp(1.44rem, calc(1.11rem + 1.64vw), 2.34rem);
+  --text-5: clamp(1.73rem, calc(1.29rem + 2.19vw), 2.93rem);
+  --text-6: clamp(2.07rem, calc(1.5rem + 2.89vw), 3.66rem);
+  --text-7: clamp(2.49rem, calc(1.73rem + 3.8vw), 4.58rem);
+  --text-8: clamp(3rem, calc(1.9rem + 4vw), 5.1rem);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-margin-top: 140px;
+}
+
+body {
+  font-family: "Lilita One", cursive;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }

@@ -1,0 +1,37 @@
+.weapon-details {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  height: 145px;
+}
+
+.weapon h3 {
+  font-size: var(--text-4);
+  color: var(--optional-color);
+}
+
+.weapon h4 {
+  font-size: var(--text-1);
+}
+
+.flip-face {
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  flex-flow: row-reverse nowrap;
+  transform: rotateY(180deg);
+}

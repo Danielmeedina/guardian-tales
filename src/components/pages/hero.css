@@ -1,0 +1,254 @@
+.background-hero {
+  width: 100%;
+  min-height: 110vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container-hero {
+  max-width: var(--width-page);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  min-width: 70%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  padding: 15px 10px;
+  font-size: var(--text-4);
+  color: var(--optional-color);
+  border-top: 4px solid var(--secondary-color);
+  border-bottom: 4px solid var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.img-hero {
+  max-width: 100%;
+  height: 100vh;
+}
+
+.img-hero img {
+  max-width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  animation: movement 10s ease infinite alternate both;
+}
+
+@keyframes movement {
+  0% {
+    object-position: center;
+  }
+  30% {
+    object-position: left;
+  }
+
+  60% {
+    object-position: center;
+  }
+
+  90% {
+    object-position: right;
+  }
+
+  100% {
+    object-position: center;
+  }
+}
+
+.container-details {
+  max-width: var(--width-page);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+
+.info-heroe {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(23, 32, 41, 0.816);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 10px;
+  grid-template-areas:
+    "details weapon  sprites"
+    "details history  history"
+    "details history history"
+    "details history history";
+}
+
+.info-heroe * {
+  z-index: 90;
+}
+
+.blur {
+  z-index: 7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(5px);
+  opacity: 0.7;
+}
+
+.hero-details {
+  grid-area: details;
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-transform: capitalize;
+}
+
+.hero-details ul {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.weapon {
+  grid-area: weapon;
+  padding: 5px;
+  height: 180px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  word-wrap: break-word;
+  transition: transform 1s ease-in-out;
+  perspective: 10rem;
+  transform-style: preserve-3d;
+  min-width: 330px;
+}
+
+.weapon img {
+  border-radius: 15px;
+}
+
+.weapon:hover {
+  background-color: var(--title-color);
+  border-radius: 10px;
+}
+
+.change {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.change button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--optional-color);
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.sprites {
+  grid-area: sprites;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+}
+
+.history {
+  grid-area: history;
+  border-radius: 10px;
+  height: 260px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.history:hover {
+  background-color: var(--title-color);
+}
+
+.history::-webkit-scrollbar {
+  width: 6px;
+  height: auto;
+}
+
+.history::-webkit-scrollbar-thumb {
+  background: var(--optional-color);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 840px) {
+  .info-heroe {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-areas:
+      "details weapon"
+      "details sprites"
+      "history history"
+      "history history ";
+  }
+
+  .weapon {
+    justify-content: center;
+    margin-left: -65px;
+    min-width: 280px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .info-heroe {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-details {
+    align-self: flex-start;
+  }
+
+  .hero-details small {
+    font-size: var(--text-5);
+  }
+
+  .hero-details h3 {
+    font-size: var(--text-7);
+  }
+  .weapon {
+    margin-left: 0;
+    width: 85%;
+    gap: 20px;
+  }
+}
