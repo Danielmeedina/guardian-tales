@@ -14,10 +14,6 @@ const Error404 = () => {
       <div className="error-content">
         <h2>ERROR 404</h2>
         <p>Page not found</p>
-        {/* <img
-          src={imagenError}
-          alt="error"
-        /> */}
         <Link to="/">
           <button className="btn-error">Home</button>
         </Link>
