@@ -29,3 +29,9 @@ body {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

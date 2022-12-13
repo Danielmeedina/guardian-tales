@@ -37,7 +37,7 @@
   flex-flow: row nowrap;
 }
 
-.nav-links > ul {
+.nav-links ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -46,11 +46,15 @@
   list-style-type: none;
 }
 
-.links > li > a {
+.links li a {
   padding: 21px;
 }
 
-.links > li > a:hover {
+.links li a:hover {
   border-bottom: 3px solid var(--optional-color);
   color: var(--optional-color);
+}
+
+.links:first-child {
+  position: relative;
 }

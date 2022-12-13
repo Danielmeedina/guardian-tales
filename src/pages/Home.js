@@ -2,11 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 import "./Home.css";
 import Swal from "sweetalert2";
-import title from "../../img/title-tales.png";
-import gabi from "../../img/Gabriela.png";
-import icon from "../../img/AppIconW15.png";
-import playStore from "../../img/playStore.webp";
-import Door from "../../img/img_open.png";
+import title from "../img/title-tales.png";
+import gabi from "../img/Gabriela.png";
+import icon from "../img/AppIconW15.png";
+import playStore from "../img/playStore.webp";
+import Door from "../img/img_open.png";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Pruebas from "./Pruebas";
 
 const Home = () => {
   useEffect(() => {
@@ -24,7 +27,8 @@ const Home = () => {
 
   return (
     <>
-      <section className="home">
+      <Navbar />
+      <section id="home">
         <div className="home-container">
           <div className="home-title">
             <span>A LINK CLASIC ADVENTURE</span>
@@ -32,10 +36,15 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="about">
+      <section id="about">
         <div className="about-container">
           <div className="chibi gabi">
-            <img src={gabi} alt="gabriela gt" title="gabriela guardian tales" />
+            <img
+              src={gabi}
+              alt="gabriela gt"
+              loading="lazy"
+              title="gabriela guardian tales"
+            />
           </div>
           <div className="video-container">
             <iframe
@@ -65,10 +74,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="download">
+      <Pruebas />
+      <section id="download">
         <div className="download-container">
           <div className="icon-download">
-            <img src={icon} alt="" />
+            <img src={icon} alt="guardian tales logo" loading="lazy" />
             <div>
               <span>DOWNLOAD NOW AND BECOME A</span>
               <h3>LEGEND</h3>
@@ -93,7 +103,7 @@ const Home = () => {
                 rel="noreferrer"
               >
                 <div className="android">
-                  <img src={playStore} alt="" />
+                  <img src={playStore} alt="playstore logo" loading="lazy" />
                   <div>
                     <span>GET IT ON</span>
                     <h4>Google Play</h4>
@@ -103,10 +113,11 @@ const Home = () => {
             </div>
           </div>
           <div className="img-download">
-            <img src={Door} alt="" />
+            <img src={Door} alt="illustartion guardian tales" />
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
