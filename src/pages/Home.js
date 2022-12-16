@@ -9,11 +9,12 @@ import playStore from "../img/playStore.webp";
 import Door from "../img/img_open.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Pruebas from "./Pruebas";
+import Worlds from "../components/Worlds";
+import ModesGame from "../components/ModesGame";
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Home";
+    document.title = "Guardian Tales";
     warning();
   });
 
@@ -74,7 +75,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Pruebas />
+      <ModesGame />
+      <Worlds />
       <section id="download">
         <div className="download-container">
           <div className="icon-download">

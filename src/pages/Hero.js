@@ -6,6 +6,7 @@ import Weapons from "../components/Weapons";
 import HeroDetails from "../components/HeroDetails";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 export default function Hero() {
   const [heroe, setHeroe] = useState([]);
@@ -38,7 +39,11 @@ export default function Hero() {
     color: "white",
   };
 
-  return (
+  return !heroe.imgs?.background && !heroe.imgs?.illustration ? (
+    <div className="loader">
+      <Loader />
+    </div>
+  ) : (
     <>
       <Navbar />
       <article className="background-hero" style={backgroung}>

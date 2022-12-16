@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Pruebas.css";
+import "./Worlds.css";
 import img1 from "../img/carusel3.png";
 import img2 from "../img/carusel2.png";
 import img3 from "../img/carusel1.png";
@@ -10,11 +10,10 @@ import img7 from "../img/carusel7.png";
 import img8 from "../img/carusel8.png";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
-const Pruebas = () => {
+const Worlds = () => {
   const imgs = [img1, img2, img3, img4, img5, img6, img7, img8];
 
   const [actualImg, setActualImg] = useState(0);
-  // const [imgback, setImgback] = useState(0);
   const lengthImg = imgs?.length;
 
   if (!Array.isArray(imgs) || lengthImg === 0) return;
@@ -72,4 +71,4 @@ const Pruebas = () => {
   );
 };
 
-export default Pruebas;
+export default Worlds;

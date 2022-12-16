@@ -4,17 +4,12 @@ import Error404 from "./pages/Error404";
 import Heroes from "./pages/Heroes";
 import Hero from "./pages/Hero";
 import "./App.css";
-import Pruebas from "./pages/Pruebas";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     errorElement: <Error404 />,
-  },
-  {
-    path: "/pruebas",
-    element: <Pruebas />,
   },
   {
     path: "/heroes",

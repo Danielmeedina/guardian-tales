@@ -1,0 +1,188 @@
+#ModesGames {
+  width: 100%;
+  min-height: 80vh;
+  background: rgb(255, 255, 255) url(../img/backgrounds/bg_modes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 0 0 15px;
+}
+
+#ModesGames h3 {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--optional-color);
+  font-size: var(--text-5);
+  margin-bottom: 20px;
+}
+
+.modesContainer {
+  max-width: var(--width-page);
+  min-height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuModes {
+  min-height: 70vh;
+  width: 40%;
+  flex-shrink: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.carrousel {
+  width: 90%;
+  height: 70vh;
+  padding: 40px 0;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  gap: 50px;
+  border-radius: 15px;
+}
+
+.cardModes {
+  width: 90%;
+  min-height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: carrousel 5s ease alternate infinite both;
+}
+.carrousel:hover .cardModes {
+  animation-play-state: paused;
+}
+@keyframes carrousel {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(-480%);
+  }
+}
+
+.cardModes img {
+  position: absolute;
+  left: -20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.cardModes button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: var(--text-3);
+  font-family: "Lilita One", cursive;
+  border-radius: 15px;
+  background: rgba(250, 248, 248, 0.404);
+  background: linear-gradient(
+    270deg,
+    rgba(250, 248, 248, 0.404) 75%,
+    transparent 100%
+  );
+}
+
+.cardModes button:hover {
+  color: rgb(255, 255, 255);
+  background: var(--optional-color);
+  background: linear-gradient(
+    270deg,
+    var(--optional-color) 75%,
+    transparent 100%
+  );
+}
+
+.showModes {
+  width: 60%;
+  min-height: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  .modesContainer {
+    flex-flow: column nowrap;
+    min-height: 50vh;
+  }
+  .menuModes {
+    width: 100%;
+    min-height: 20vh;
+  }
+
+  .carrousel {
+    width: 100%;
+    height: 20vh;
+    padding: 0;
+    flex-flow: row nowrap;
+  }
+
+  .carrousel h4 {
+    padding-left: 40px;
+  }
+
+  .cardModes {
+    min-width: 230px;
+    height: 80px;
+  }
+
+  @keyframes carrousel {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(calc(-75% * 6));
+    }
+  }
+
+  .cardModes img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .showModes {
+    width: 100%;
+    min-height: 40vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  @keyframes carrousel {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(calc(-100% * 6));
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  @keyframes carrousel {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(calc(-100% * 6));
+    }
+  }
+}
